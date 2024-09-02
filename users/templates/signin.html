@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopCoW Website | SIGNIN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #B71C1C;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .content {
+            max-width: 1140px;
+            padding: 15px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        a{
+            text-decoration: none;
+            color: #000;
+            text-transform: capitalize;
+            width: 120px;
+            display: block;
+        }
+
+        .input-section {
+            display: flex;
+            gap: 10px;
+            border: 1px solid black;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        .input-section:hover{
+            scale: 1.2;
+        }
+
+        .input-section img{
+            width: 20px;
+            height: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TopCoW Website</h1>
+    </header>
+    <div class="container">
+        <div class="content">
+            <div>
+                <h1>Sign In With Google</h1>
+                <p>To test the CT or MR image of the brain for identifying the Circle of Willis.</p>
+            </div>
+            {% load socialaccount %}  
+            <a href="{% provider_login_url 'google' %}">
+                <div class="input-section">
+                    <div>login </div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google Logo">
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

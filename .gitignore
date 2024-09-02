@@ -1,0 +1,14 @@
+venv/
+env/
+.venv/
+.env/
+
+**/__pycache__
+
+uploads/
+
+sample test images/
+
+*.json
+
+db.sqlite3
